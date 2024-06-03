@@ -1,0 +1,1 @@
+kubectl config view --minify --flatten --context=kind-source-cluster > $HOME/.kube/source-cluster-config.yml

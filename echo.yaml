@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: echo
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - image: kicbase/echo-server:1.0
+          ports:
+            - containerPort: 8080
