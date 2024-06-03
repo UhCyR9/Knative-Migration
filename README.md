@@ -58,7 +58,7 @@ kubectl get pods --namespace knative-serving
 Jeśli wszystkie podsy są w stanie `Running` lub `Completed` to znaczy, że knative zostało zainstalowane poprawnie.
 ![](2024-06-03-02-38-55.png)\
 \
-7. Konfiguracja DNS\
+7. Konfiguracja DNS
 > Knative udostępnia zadanie Kubernetes o nazwie default-domain, które konfiguruje Knative Serving do używania sslip.io jako domyślnego sufiksu DNS.
 
 Aby skonfigurować "magicznego" DNS dla klastra, należy wywołać polecenie
