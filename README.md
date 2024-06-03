@@ -21,7 +21,7 @@ https://github.com/knative-extensions/kn-plugin-migration
 Po zainstalowaniu AWS CLI należy skonfigurować dostęp do konta AWS. W tym celu należy wywołać polecenie `aws configure` i podać odpowiednie dane dostępowe.
 
 3. Utworzenie dwóch klastrów EKS\
-Należy utworzyć dwa klastry EKS w AWS. Wchodzimy do konsoli AWS, wybieramy usługę EKS, a następnie tworzymy nowy klaster i konfigurujemy go. W przypadku naszego projektu utworzyliśmy dwa klastry: `knative-cluster-1` oraz `knative-cluster-1`.
+Należy utworzyć dwa klastry EKS w AWS. Wchodzimy do konsoli AWS, wybieramy usługę EKS, a następnie tworzymy nowy klaster i konfigurujemy go. W przypadku naszego projektu utworzyliśmy dwa klastry: `knative-cluster-1` oraz `knative-cluster-2`.
 
 4. Dodanie klastrów do konfiguracji kubectl\
 Aby dodać klastry do konfiguracji kubectl wywołujemy polecenia
@@ -71,7 +71,7 @@ kubectl apply -f https://github.com/knative/serving/releases/download/knative-v1
 
 ### Migracja aplikacji
 
-1. Tworzymy yaml z konfiguacją klastrów
+1. Tworzymy plik .yaml z konfiguacją klastrów
 ```
 kubectl config view --minify --flatten --context=<first_cluster_context> > $HOME/.kube/source.yml
 
